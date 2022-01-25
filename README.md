@@ -20,6 +20,7 @@ JavaScript, HTML, CSS, Node, React
 
 ## Installation
 No installation, view the deployed page here:
+https://redux-store-123123.herokuapp.com/
 
 ## Usage 
 
