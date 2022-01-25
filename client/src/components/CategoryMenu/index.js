@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
@@ -13,6 +14,9 @@ function CategoryMenu() {
   const selectState = state => state 
   const state = useSelector(selectState)
 
+  const { categories } = state;
+
+  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
   useEffect(() => {
     if (categoryData) {
       dispatch({
@@ -31,14 +35,12 @@ function CategoryMenu() {
       });
     }
   }, [categoryData, loading, dispatch]);
-
   const handleClick = (id) => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,
       currentCategory: id,
     });
   };
-
   return (
     <div>
       <h2>Choose a Category:</h2>
@@ -55,5 +57,4 @@ function CategoryMenu() {
     </div>
   );
 }
-
 export default CategoryMenu;
