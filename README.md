@@ -22,6 +22,9 @@ JavaScript, HTML, CSS, Node, React
 No installation, view the deployed page here:
 https://redux-store-123123.herokuapp.com/
 
+![image](https://user-images.githubusercontent.com/8472345/150930085-8d385c32-2804-4c30-a32f-a54d05b9742a.png)
+
+
 ## Usage 
 
 However you see fit, enjoy!
